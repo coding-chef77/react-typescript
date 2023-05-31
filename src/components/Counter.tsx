@@ -1,19 +1,17 @@
-
 type CounterProps = {
- 
-    setCount: React.Dispatch<React.SetStateAction<number>>
-    children: React.ReactNode;
-    };
-
-const Counter = ({ setCount, children }: CounterProps) => {
-   
+    setCount: React.Dispatch<React.SetStateAction<number>>;
+    count: number;
+  };
+  
+  const Counter = ({ setCount, count }: CounterProps) => {
     return (
-        <>
-            <h1>{children}</h1>
-            <button onClick={() => setCount(prev => prev + 1)}>+</button>
-            <button onClick={() => setCount(prev => prev - 1)}>-</button>
-        </>
+      <>
+        <h1>Count is {count}</h1>
+        <button onClick={() => setCount(prev => prev + 1)}>+</button>
+        <button onClick={() => setCount(prev => prev - 1)}>-</button>
+      </>
     )
-}
-
-export default Counter;
+  }
+  
+  export default Counter;
+  

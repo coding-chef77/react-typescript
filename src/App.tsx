@@ -10,7 +10,8 @@ function App() {
     <>
     <Heading title="Hello" />
     <Section title="Different title"><p>This is my section</p></Section>
-    <Counter setCount={setCount}>Count is {count}</Counter>
+    <Counter setCount={setCount} count={count}/>
+
     <List items={["a", "b", "c"]} render={(item: string) => <span className='gold'>{item}</span>}/>
     </>
   )
